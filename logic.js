@@ -14,7 +14,6 @@ function Answer(input) {
   let j = inputSortedString.length;
   let u = 0;
   let k = 1;
-  let pulled = 0;
   while (j > 0) {
     u = 0;
     k = 1;
@@ -24,7 +23,6 @@ function Answer(input) {
         tempAnswer.push(inputStringsCopy[k]);
         inputSortedString.splice(k, 1);
         inputStringsCopy.splice(k, 1);
-        pulled += 1;
       } else {
         k += 1;
       }
@@ -33,7 +31,6 @@ function Answer(input) {
     tempAnswer = [];
     inputSortedString.splice(u, 1);
     inputStringsCopy.splice(u, 1);
-    pulled += 1;
     j = inputSortedString.length;
   }
   return answer;
